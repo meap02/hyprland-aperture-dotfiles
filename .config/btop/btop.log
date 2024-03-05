@@ -1,0 +1,6 @@
+
+2022/06/30 (12:53:42) | ===> btop++ v.1.2.3
+2022/06/30 (12:53:42) | ERROR: Failed to get size of terminal!
+
+2024/02/20 (16:27:53) | ===> btop++ v.1.3.2
+2024/02/20 (16:27:53) | ERROR: Exception during Config::unlock() : unordered_map::at

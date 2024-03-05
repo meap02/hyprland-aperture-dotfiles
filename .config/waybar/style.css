@@ -1,0 +1,408 @@
+/*
+@import "catppuccin/mocha.css";
+*/
+
+@define-color base #fff;
+@define-color mantle #fff;
+@define-color crust #fff;
+
+@define-color text #000000;
+@define-color subtext0 #000000;
+@define-color subtext1 #000000;
+
+@define-color surface0 rgba(255, 255, 255, 0.9);
+@define-color surface1 #d5dbeb;
+@define-color surface2 #ee7f1b;
+@define-color surface3 #005ddf;
+
+@define-color maroon #eba0ac;
+@define-color red #f22227;
+
+/*
+ * Portal Styling
+ */
+@define-color portal_blue #005ddf;
+@define-color portal_orange #ee7f1b;
+@define-color portal_blue_dec #0082c4;
+@define-color portal_grey #d5dbeb;
+
+/* =============================== */
+/* Universal Styling */
+* { 
+  border: none;
+  border-radius: 0px;
+  /*font-family: 'CaskaydiaCove Nerd Font', monospace;*/
+  font-family: 'Univers Condensed';
+  font-weight: bold;
+  font-size: 14px;
+  min-height: 0;
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* Bar Styling */
+#waybar {
+  background: transparent;
+  color: @text;
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* Main Modules */
+#custom-launcher,
+#workspaces,
+#window,
+#tray,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#mpd,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#custom-music,
+#custom-updates,
+#custom-nordvpn,
+#custom-notifications,
+#custom-power,
+#custom-custom,
+#custom-cycle_wall,
+#custom-clipboard,
+#custom-ss,
+#custom-weather {
+  background-color: @surface0;
+  color: @text;
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+  /*box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;*/
+  margin-top: 10px;
+  /*
+    margin-bottom: 10px;
+*/
+  margin-right: 10px;
+}
+
+/* =============================== */
+/* Launcher Module */
+#custom-launcher {
+  color: @text;
+  padding-top: 0px;
+  border: 2px solid #000;
+  padding-bottom: 0px;
+  padding-right: 19px;
+}
+
+/* =============================== */
+/* Workspaces */
+#workspaces {
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 2px solid #000;
+}
+
+#workspaces * {
+  font-size: 0px;
+}
+
+#workspaces button {
+  background-color: @surface3;
+  border-radius: 100%;
+  min-height: 14px;
+  min-width: 14px;
+  margin: 5px 8px;
+  padding: 0px;
+  /*transition: all 0.5s cubic-bezier(0.33, 1.0, 0.68, 1.0); easeInOutCubic */
+  transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.68);
+  box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
+}
+
+#workspaces button.active {
+  background: @surface2;
+  border-radius: 1rem;
+  padding: 0rem 10px;
+  background-size: 400% 400%;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+#workspaces button:hover {
+  background-color: @surface2;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 30%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient_f {
+  0% {
+    background-position: 0% 200%;
+  }
+
+  50% {
+    background-position: 200% 0%;
+  }
+
+  100% {
+    background-position: 400% 200%;
+  }
+}
+
+@keyframes gradient_f_nh {
+  0% {
+    background-position: 0% 200%;
+  }
+
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* System Monitoring Modules */
+#cpu,
+#memory,
+#temperature {
+  color: @text;
+}
+
+#cpu {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: 0px;
+  padding-right: 5px;
+}
+
+#memory {
+  border-radius: 0px;
+  margin-right: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#temperature {
+  border-radius: 0px;
+  margin-right: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#disk {
+  color: @text;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 5px;
+  padding-right: 1rem;
+}
+
+/* Updates Module */
+#custom-updates {
+  color: @text;
+  border: 2px solid #000;
+  letter-spacing: 1px;
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* Clock Module */
+#clock {
+  color: @text;
+  border: 2px solid #000;
+  letter-spacing: 1px;
+}
+
+/* =============================== */
+
+#custom-music.Playing {
+  background: rgb(0, 0, 0);
+  color: #fff;
+  /*background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px 1px #fff;*/
+}
+/*Classic White text on black*/
+/*
+#custom-music.Playing {
+  background: rgb(0, 0, 0);
+  background-color: #000;
+  color: #fff;
+}
+*/
+@keyframes zoom {
+    0%{
+        background-size: 100% 150%;
+    }
+    100%{
+	background-size: 150% 100%; 
+    }
+}
+
+#custom-music.Paused,
+#custom-music.Stopped {
+  background: @surface0;
+  border: 2px solid #000;
+}
+
+
+/* =============================== */
+/* Music/PlayerCTL Module */
+#custom-music {
+  color: @text;
+  font-size: 15px;
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* Network Module */
+#network {
+  color: @text;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: 0px;
+  padding-right: 5px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+  letter-spacing: 1px;
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* PulseAudio Module */
+#pulseaudio {
+  color: @text;
+  border-radius: 0;
+  margin-right: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 7px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  letter-spacing: 1px;
+
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* Backlight Module */
+#backlight {
+  color: @text;
+  border-radius: 0;
+  margin-right: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  letter-spacing: 1px;
+
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* Battery Module */
+#battery {
+  color: @text;
+  border-radius: 0;
+  margin-right: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  letter-spacing: 1px;
+}
+
+#battery.charging {
+  color: @text;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+  animation-name: blink;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    color:#fff;
+  }
+}
+
+/* =============================== */
+
+/* Notifications Module */
+#custom-notifications {
+  color: @text;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 5px;
+  padding-right: 1.25rem;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  
+  /*text-align: center;*/
+}
+
+
+/* =============================== */
+/* Tray Module */
+#tray {
+  color: @text;
+  padding-right: 1.25rem;
+  border: 2px solid #000;
+}
+
+/* =============================== */
+
+
+/* =============================== */
+/* |       Custom Modules        | */
+/* =============================== */
+
+/* Powermenu Module */
+#custom-power {
+  color: @text;
+  /* border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 8px; */
+  padding-right: 1.20rem;
+  border: 2px solid #000;
+}
+
+/* =============================== */
