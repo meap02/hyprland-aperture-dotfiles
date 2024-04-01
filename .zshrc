@@ -93,8 +93,8 @@ alias df='df -h'
 #make cd=z so I use z all the time
 alias cd='z'
 
-# Always use nvim
-alias vim='nvim'
+#add the 'open' command
+alias open='xdg-open'
 
 # add hostname command back
 # alias hostname = 
