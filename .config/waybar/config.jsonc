@@ -13,10 +13,10 @@
     "modules-left": [
         "custom/launcher",
         "hyprland/workspaces",
-        // "cpu",
-        // "memory",
-        // "temperature",
-        // "disk",
+        "cpu",
+        "memory",
+        "temperature",
+        "disk",
         "custom/updates"
     ],
     "modules-center": [
@@ -58,13 +58,13 @@
     "cpu": {
         "format": " {usage}%",
         "tooltip": true,
-        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+        "on-click": "kitty --title task_mgr btop",
         "interval": 2
     },
     "memory": {
-        "format": " {}%",
+        "format": "  {}%",
         "tooltip": true,
-        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+        "on-click": "kitty --title task_mgr btop",
         "interval": 2
     },
     "temperature": {
@@ -79,13 +79,13 @@
             ""
         ],
         "tooltip": true,
-        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+        "on-click": "kitty --title task_mgr btop",
         "interval": 2
     },
     "disk": {
-        "format": " {percentage_used}% ({free})",
+        "format": "  {percentage_used}%",
         "tooltip": true,
-        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+        "on-click": "gnome-disks",
         "interval": 2
     },
     "custom/updates": {
@@ -125,7 +125,7 @@
         "format-disconnected": "{icon} No Internet",
         "format-linked": " {ifname} (No IP)",
         "format-alt": "↕{bandwidthUpBytes} | ↕{bandwidthDownBytes}",
-        "tooltip-format": "{ifname}: {ipaddr}/{cidr}  {gwaddr}",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}   {gwaddr}",
         "tooltip-format-wifi": "{icon} {essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{icon} {ipaddr}/{cidr}",
         "tooltip-format-disconnected": "{icon} Disconnected",

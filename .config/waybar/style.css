@@ -1,7 +1,3 @@
-/*
-@import "catppuccin/mocha.css";
-*/
-
 @define-color base #fff;
 @define-color mantle #fff;
 @define-color crust #fff;
@@ -31,7 +27,6 @@
 * { 
   border: none;
   border-radius: 0px;
-  /*font-family: 'CaskaydiaCove Nerd Font', monospace;*/
   font-family: 'Univers Condensed';
   font-weight: bold;
   font-size: 14px;
@@ -73,19 +68,12 @@
 #custom-notifications,
 #custom-power,
 #custom-custom,
-#custom-cycle_wall,
-#custom-clipboard,
-#custom-ss,
-#custom-weather {
+#custom-cycle_wall{
   background-color: @surface0;
   color: @text;
   border-radius: 16px;
   padding: 0.5rem 1rem;
-  /*box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;*/
   margin-top: 10px;
-  /*
-    margin-bottom: 10px;
-*/
   margin-right: 10px;
 }
 
@@ -128,8 +116,8 @@
   border-radius: 1rem;
   padding: 0rem 10px;
   background-size: 400% 400%;
-  animation: gradient_f 20s ease-in-out infinite;
-  transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+  /*animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);*/
 }
 
 #workspaces button:hover {
@@ -181,8 +169,12 @@
 /* System Monitoring Modules */
 #cpu,
 #memory,
+#disk,
 #temperature {
   color: @text;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  letter-spacing: 1px;
 }
 
 #cpu {
@@ -190,6 +182,7 @@
   border-bottom-right-radius: 0;
   margin-right: 0px;
   padding-right: 5px;
+  border-left: 2px solid #000;
 }
 
 #memory {
@@ -212,6 +205,7 @@
   border-bottom-left-radius: 0;
   padding-left: 5px;
   padding-right: 1rem;
+  border-right: 2px solid #000;
 }
 
 /* Updates Module */
@@ -304,7 +298,6 @@
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
   letter-spacing: 1px;
-
 }
 
 /* =============================== */
