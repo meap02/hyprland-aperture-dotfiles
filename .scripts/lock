@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+swaylock \
+--image ~/.config/hypr/wallpapers/current_wallpaper.png \
+--indicator \
+--clock \
+--inside-wrong-color F07716  \
+--ring-wrong-color 161925  \
+--inside-clear-color FFFFFF \
+--ring-clear-color 161925 \
+--inside-ver-color 89b4fa \
+--ring-ver-color D5DBE \
+--text-color  000000 \
+--indicator-radius 100 \
+--indicator-thickness 5 \
+--effect-blur 9x8 \
+--effect-vignette 0.6:0.6 \
+--ring-color 000000 \
+--key-hl-color FFFFFF \
+--line-color 313244 \
+--inside-color D5DBEB25 \
+--separator-color 00000000 \
+--fade-in 0.1 \
+--grace 1 &
+
+# sleep 2; ~/.config/hypr/scripts/screenshot_full

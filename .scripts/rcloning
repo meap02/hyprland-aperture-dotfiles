@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Mount the main onedrive connection
+if mountpoint -q "$HOME/onedrive"; then
+    echo "Onedrive is already mounted"
+else
+    rclone mount onedrive: /home/meap/onedrive --vfs-cache-mode full --allow-non-empty &
+    echo "Onedrive has been mounted"
+fi
+sleep 1
+# Move all of the local files into the ondrive before mounting the rest of the dirs
+if mountpoint -q "$HOME/onedrive"; then # check if onedrive mounted
+    for dir in "Documents" "Pictures" "Videos" "Music"; do # For each of the dirs we'll be mounting
+        if mountpoint -q "$HOME/$dir"; then # Check if those dirs are already mounted
+            echo "rclone directory $dir is already mounted"
+        else
+            if [ -n "$(ls -A $HOME/$dir)" ]; then # Check if the local dir has items
+                for file in "$HOME/$dir/*"; do
+                    # Move them from the onedrive to the local drive
+                    mkdir -p "$HOME/onedrive/$dir"
+                    mv -b $file "$HOME/onedrive/$dir"
+                done
+            fi
+            # mount the Videos, Pictures, Music, and Documents folders within the home directory
+            eval "rclone mount onedrive:$dir $HOME/$dir --vfs-cache-mode full &"
+            echo "rclone directory $dir has been mounted"
+        fi
+    done
+else
+    echo "rclone failed to mount"
+fi

@@ -19,11 +19,14 @@ scripts=~/.scripts
 # gsettings
 #gsettings set org.gnome.desktop.interface gtk-theme 'Tokyonight-Dark-BL-LB'
 gsettings set org.gnome.desktop.interface font-name 'Hack Nerd Font 9'
-#gsettings set org.gnome.desktop.interface icon-theme 'Tokyonight-Moon'
+gsettings set org.gnome.desktop.interface icon-theme 'HighContrast'
 gsettings set org.gnome.desktop.interface cursor-theme 'Sweet-cursors'
 
 #QT Settings
 export QT_QPA_PLATFORMTHEME=gtk2
+
+# rclone mounts
+$scripts/rcloning &
 
 # Hyprland Plugin Manager
 #hyprpm reload -n
