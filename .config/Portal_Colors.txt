@@ -1,0 +1,6 @@
+#D5DBEB Light blue grey
+#005DDF Cerulean blue
+#F07716 Pumpkin orange
+#0082C4 Water blue
+#FFFFFF White
+#000000 Black
