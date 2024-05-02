@@ -46,8 +46,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 # User configuration
-
-neofetch
+if [[ $(ps -p $(ps -p $$ -o ppid=) -o args=) == *"kitty"* ]]; then
+    neofetch
+fi
 export MANPATH="/usr/local/man:$MANPATH"
 
 # Preferred editor for local and remote sessions
@@ -95,6 +96,8 @@ alias cd='z'
 
 #add the 'open' command
 alias open='xdg-open'
+
+alias fman='compgen -c | fzf | xargs man'
 
 # add hostname command back
 # alias hostname = 
