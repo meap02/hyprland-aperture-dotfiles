@@ -1,0 +1,9 @@
+#!/bin/bash
+path=/usr/share/sddm/themes/sugar-light/chamber-imgs
+count=$(expr $(ls -1 $path | wc -l) - 1)
+current=$(readlink "$path/current_chamber.png" | grep -o '[0-9]\+')
+number=$(( (current + 1) % count ))
+if [ ${#number} -eq 1 ]; then
+    number="0$number"
+fi
+ln -sf "$path/chamber_$number.png" "$path/current_chamber.png"
