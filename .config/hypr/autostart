@@ -28,6 +28,9 @@ export QT_QPA_PLATFORMTHEME=gtk2
 # rclone mounts
 $scripts/rcloning &
 
+# Change the next SDDM background
+$scripts/rotate_login &
+
 # Hyprland Plugin Manager
 #hyprpm reload -n
 # notification daemon
@@ -40,8 +43,8 @@ hypridle &
 $scripts/launch_waybar &
 
 # wallpaper
-$scripts/wall ~/.config/hypr/wallpapers/current_wallpaper.png &
-
+#$scripts/wall ~/.config/hypr/wallpapers/current_wallpaper.png &
+swaybg -i .config/hypr/wallpapers/current_wallpaper.png -m fill &
 # Applets
 # $scripts/appindicator.py &
 blueman-applet &
