@@ -69,7 +69,7 @@
     },
     "temperature": {
         // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 40,
         "format-critical": "{icon} {temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
@@ -229,8 +229,8 @@
     },
     "clock": {
         "timezone": "America/Los_Angeles",
-        "format": "  {:%b %d <small>%a</small> %I:%M%p}",
-        "format-alt": "  {:%A %B %d %Y | %r}",
+        "format": "  {:%a %b %d | %I:%M%p}",
+        "format-alt": "  {:%D | %r}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "calendar-weeks-pos": "right",
         "today-format": "<span color='#000000'><b><u>{}</u></b></span>",
