@@ -219,8 +219,8 @@
         "return-type": "json",
         "exec-if": "which swaync-client",
         "exec": "swaync-client -swb",
-        "on-click": "sleep 0.15 && swaync-client -t -sw",
-        "on-click-right": "sleep 0.15 && swaync-client -d -sw",
+        "on-click-right": "sleep 0.15 && swaync-client -t -sw",
+        "on-click": "sleep 0.15 && swaync-client -d -sw",
         "escape": true
     },
     "tray": {
@@ -228,7 +228,7 @@
         "spacing": 15
     },
     "clock": {
-        "timezone": "America/Los_Angeles",
+        "timezone": "%Z",
         "format": "  {:%a %b %d | %I:%M%p}",
         "format-alt": "  {:%D | %r}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",

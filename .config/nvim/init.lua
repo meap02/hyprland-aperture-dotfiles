@@ -5,5 +5,6 @@ if vim.g.neovide then
     vim.g.neovide_fullscreen = false
     vim.g.neovide_cursor_smooth_blink = true
     vim.g.neovide_cursor_vfx_mode = "ripple"
+    vim.opt.termguicolors = true
 end
 

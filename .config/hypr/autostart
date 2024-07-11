@@ -45,6 +45,7 @@ $scripts/launch_waybar &
 # wallpaper
 #$scripts/wall ~/.config/hypr/wallpapers/current_wallpaper.png &
 swaybg -i .config/hypr/wallpapers/current_wallpaper.png -m fill &
+
 # Applets
 # $scripts/appindicator.py &
 blueman-applet &
@@ -55,7 +56,7 @@ nm-applet --indicator &\
 #Discord &
 #thunderbird &
 # Moving startup apps to 2nd workspace
-hyprctl dispatch exec [workspace 2 silent] spotify-launcher
+spotify-player -d
 hyprctl dispatch exec [workspace 2 silent] discord
 hyprctl dispatch exec [workspace 2 silent] thunderbird
 

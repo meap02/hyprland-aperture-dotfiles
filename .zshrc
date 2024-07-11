@@ -75,11 +75,11 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 
 # auto color my ls and grep command
-alias ls='lsd'
 alias grep='grep --color=auto'
 
 # ll shortcut
-alias ll="lsd -lh"
+alias ll="ls -lh"
+alias la="ls -lah"
 
 # e for exit shortcut
 alias e='exit'
